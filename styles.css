@@ -46,6 +46,10 @@ a:hover {
     text-decoration: underline;
 }
 
+.text-highlight {
+    color: #59B224;
+}
+
 /* Presentation container */
 .presentation-container {
     width: 90%;
