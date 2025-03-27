@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid meet">
+  <style>
+    .text { font-family: 'Poppins', sans-serif; font-weight: 600; }
+    .primary { fill: #FF9900; }
+    .secondary { fill: #0A58A5; }
+    .white { fill: #FFFFFF; }
+    .black { fill: #1C1C1C; }
+    .box { fill: #FFFFFF; stroke-width: 2px; }
+  </style>
+  
+  <!-- Fond avec gradient -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1C1C1C;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#0A58A5;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  <rect width="300" height="200" fill="url(#grad1)" rx="10" ry="10" />
+  
+  <!-- Logo stylisé MCP -->
+  <circle cx="150" cy="70" r="40" class="box" stroke="#FF9900" />
+  <text x="150" y="80" text-anchor="middle" class="text primary" font-size="24">MCP</text>
+  
+  <!-- Éléments connectés -->
+  <circle cx="80" cy="140" r="20" class="box" stroke="#0A58A5" />
+  <circle cx="150" cy="160" r="20" class="box" stroke="#0A58A5" />
+  <circle cx="220" cy="140" r="20" class="box" stroke="#0A58A5" />
+  
+  <!-- Lignes de connexion -->
+  <line x1="118" y1="98" x2="95" y2="125" stroke="#FF9900" stroke-width="2" />
+  <line x1="150" y1="110" x2="150" y2="140" stroke="#FF9900" stroke-width="2" />
+  <line x1="182" y1="98" x2="205" y2="125" stroke="#FF9900" stroke-width="2" />
+  
+  <!-- Icônes dans les cercles -->
+  <text x="80" y="144" text-anchor="middle" class="text secondary" font-size="11">API</text>
+  <text x="150" y="164" text-anchor="middle" class="text secondary" font-size="11">CODE</text>
+  <text x="220" y="144" text-anchor="middle" class="text secondary" font-size="11">IA</text>
+</svg> 

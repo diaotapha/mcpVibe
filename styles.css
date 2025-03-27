@@ -1,0 +1,427 @@
+/* Variables for colors */
+:root {
+    --primary-color: #FF9900; /* Orange */
+    --secondary-blue: #0A58A5; /* Bleu */
+    --secondary-green: #0A58A5; /* Vert */ 
+    --secondary-red: #FC121B; /* Rouge */
+    --secondary-black: #1C1C1C; /* Noir */
+    --gray-light: #f5f5f5;
+    --gray-medium: #e0e0e0;
+    --gray-dark: #333333;
+    --white: #ffffff;
+    --transition-speed: 0.3s;
+}
+
+/* Configuration Tailwind */
+/* On ajoute notre config juste après l'import dans le HTML */
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: var(--secondary-black);
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-weight: 300;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: var(--secondary-blue);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Presentation container */
+.presentation-container {
+    width: 90%;
+    max-width: 800px;
+    height: 85vh;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Controls bar */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--gray-dark);
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.control-btn:hover {
+    background-color: var(--gray-light);
+}
+
+.slide-counter {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gray-dark);
+}
+
+.timer-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#interval-select {
+    padding: 5px;
+    border: 1px solid var(--gray-medium);
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+}
+
+/* Slides container */
+.slides-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Individual slide */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex !important; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100%;
+}
+
+/* Illustration SVG styles */
+.slide-illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.slide-svg {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.slide-illustration:hover .slide-svg {
+    transform: scale(1.03);
+}
+
+/* Styles pour les illustrations compactes des slides 3 et 5 */
+.compact-illustration {
+    margin: 10px auto;
+    padding: 0;
+    max-height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.compact-svg {
+    max-width: 340px;
+    transform: scale(0.9);
+    transform-origin: center;
+}
+
+.compact-illustration:hover .compact-svg {
+    transform: scale(0.95);
+}
+
+/* Styles spécifiques pour les slides 3 et 5 */
+.slide-advantages .slide-content,
+.slide-debate .slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.slide-advantages h2,
+.slide-debate h2 {
+    text-align: center;
+}
+
+.slide-advantages p.text-center {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.debate-questions {
+    width: 100%;
+    max-width: 600px;
+}
+
+.debate-questions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.debate-questions li {
+    background-color: var(--gray-light);
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--secondary-blue);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.debate-questions li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Typography styles */
+h1 {
+    color: var(--secondary-blue);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--secondary-blue);
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: var(--secondary-black);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+ul, ol {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Animation pour les transitions de slides */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animations pour l'entrée des éléments */
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.85); }
+    to { transform: scale(1); }
+}
+
+@keyframes fadeInRotate {
+    from {
+        opacity: 0;
+        transform: rotate(-5deg) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* Animations pour tous les slides */
+.slide.active h2 {
+    animation: slideInUp 0.4s ease-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+    font-size: 36px;
+}
+
+.slide.active .slide-illustration {
+    animation: fadeInRotate 0.5s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.slide.active p, 
+.slide.active ul, 
+.slide.active .debate-questions {
+    animation: slideInUp 0.4s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* Animations spécifiques pour les slides avec illustrations compactes */
+.slide-advantages.active .slide-illustration,
+.slide-debate.active .slide-illustration {
+    animation: scaleIn 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.slide-advantages.active .compact-svg,
+.slide-debate.active .compact-svg {
+    animation: fadeInRotate 0.7s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .presentation-container {
+        width: 95%;
+        height: 90vh;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    .slide-svg {
+        max-width: 320px;
+    }
+    
+    .compact-svg {
+        max-width: 280px;
+        transform: scale(0.85);
+    }
+}
+
+@media (max-width: 480px) {
+    .presentation-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+    
+    .slide-content {
+        padding: 0 10px;
+    }
+    
+    h1 {
+        font-size: 1.4rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    .slide-svg {
+        max-width: 280px;
+    }
+    
+    .compact-svg {
+        max-width: 240px;
+        transform: scale(0.8);
+    }
+    
+    .controls {
+        padding: 8px 10px;
+    }
+    
+    /* Ajuster les animations pour les petits écrans */
+    .slide.active .slide-illustration,
+    .slide-advantages.active .slide-illustration,
+    .slide-debate.active .slide-illustration {
+        animation-delay: 0.2s;
+    }
+    
+    .slide.active p, 
+    .slide.active ul, 
+    .slide.active .debate-questions {
+        animation-delay: 0.3s;
+    }
+}
+
+/* Progress indicator */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background-color: var(--primary-color);
+    width: 0;
+    transition: width 0.2s;
+    z-index: 101;
+} 

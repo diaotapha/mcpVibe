@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP et Vibecoding Présentation</title>
+    <!-- Google Fonts - Poppins (police moderne) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF9900',
+                        secondary: {
+                            blue: '#0A58A5',
+                            green: '#0A58A5',
+                            red: '#FC121B',
+                            black: '#1C1C1C'
+                        },
+                        gray: {
+                            light: '#f5f5f5',
+                            medium: '#e0e0e0',
+                            dark: '#333333'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="controls">
+            <button id="prev-btn" class="control-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="slide-counter">
+                <span id="current-slide">1</span>/<span id="total-slides">6</span>
+            </div>
+            <button id="next-btn" class="control-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="timer-control">
+                <button id="play-pause-btn" class="control-btn"><i class="fas fa-play"></i></button>
+                <select id="interval-select">
+                    <option value="0">Manuel</option>
+                    <option value="5">5 secondes</option>
+                    <option value="10">10 secondes</option>
+                    <option value="20">20 secondes</option>
+                    <option value="30">30 secondes</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="slides-container">
+            <div class="slide active">
+                <div class="slide-content">
+                    <h1 style="font-size: 36px; font-weight: 600;">Introduction aux Model Context Protocols (MCP) et au Vibecoding</h1>
+
+                    <div class="slide-illustration">
+                        <img src="images/slide0-intro.svg" alt="Illustration MCP" class="slide-svg">
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 1: Introduction -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>1. Introduction</h2>
+                    <div class="slide-illustration">
+                        <img src="images/slide1-introduction.svg" alt="Illustration MCP" class="slide-svg">
+                    </div>
+                    <p>Dans le cadre de notre démarche vers une automatisation plus efficace du développement logiciel, j'ai exploré et testé les Model Context Protocols (MCP). Cette présentation vise à vous introduire à cette nouvelle approche et à discuter de son impact potentiel sur notre manière de coder. Nous aborderons également le concept du "Vibecoding", une vision du futur du développement logiciel.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: Qu'est-ce qu'un MCP ? -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>2. Qu'est-ce qu'un MCP ?</h2>
+                    <div class="slide-illustration">
+                        <img src="images/slide2-what-is-mcp.svg" alt="Schéma de connexion MCP" class="slide-svg">
+                    </div>
+                    <p>Les MCP sont des protocoles permettant d'automatiser et d'intégrer des contextes de travail dans nos outils de développement. Ils agissent comme des connecteurs intelligents qui facilitent l'interaction entre différents services et applications.</p>
+                    
+                    <h3>2.1. Expérience avec les MCP</h3>
+                    <p>J'ai réussi à intégrer et tester deux MCP dans mon éditeur Cursor :</p>
+                    <ul>
+                        <li><strong>MCP Figma</strong> (<a href="https://github.com/GLips/Figma-Context-MCP" target="_blank">https://github.com/GLips/Figma-Context-MCP</a>) : Installation complète, de la génération du PAT Figma à l'intégration dans Cursor.</li>
+                        <li><strong>MCP GitHub</strong> (<a href="https://smithery.ai" target="_blank">https://smithery.ai</a>) : Utilisation pour interagir avec mon compte GitHub directement depuis Cursor.</li>
+                    </ul>
+                    <p>Les deux intégrations fonctionnent parfaitement, permettant d'automatiser des tâches et de fluidifier mon workflow de développement.</p>
+                </div>
+            </div>
+
+            <!-- Slide 3: Pourquoi adopter les MCP ? -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>3. Pourquoi adopter les MCP ?</h2>
+                    <div class="slide-illustration">
+                        <img src="images/slide3-why-adopt-mcp.svg" alt="Avantages des MCP" class="slide-svg">
+                    </div>
+                    <p class="text-center">Les MCP offrent plusieurs avantages :</p>
+                    <ul>
+                        <li><strong>Automatisation</strong> des interactions entre outils sans besoin d'intervention manuelle.</li>
+                        <li><strong>Gain de temps</strong> en éliminant les tâches répétitives et fastidieuses.</li>
+                        <li><strong>Intégration fluide</strong> avec des services tiers comme Figma et GitHub.</li>
+                        <li><strong>Amélioration du workflow</strong> en centralisant les actions dans un seul environnement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 4: Le Vibecoding -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>4. Le Vibecoding : L'avenir du développement ?</h2>
+                    <div class="slide-illustration">
+                        <img src="images/slide4-vibecoding.svg" alt="Illustration du Vibecoding" class="slide-svg">
+                    </div>
+                    <p>Andrej Karpathy explique que le développement d'applications web en 2025 ressemble à l'assemblage de meubles IKEA : un ensemble de services à configurer (écosystème frontend/backend, hosting, base de données, CI/CD, etc.). Cette complexité ne repose pas uniquement sur l'écriture de code mais plutôt sur la configuration et l'orchestration des différents services.</p>
+                    <p>Le <strong>Vibecoding</strong> décrit une approche dans laquelle les développeurs s'appuient davantage sur l'IA et les MCP pour automatiser ces processus. L'objectif est de permettre à chacun de se concentrer sur la création plutôt que sur la configuration.</p>
+                </div>
+            </div>
+
+            <!-- Slide 5: Débat et perspectives -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>5. Débat et perspectives</h2>
+                    <div class="slide-illustration">
+                        <img src="images/slide5-debate.svg" alt="Débat et perspectives" class="slide-svg">
+                    </div>
+                    <div class="debate-questions">
+                        <ul>
+                            <li><strong>Comment les MCP peuvent-ils être déployés dans notre organisation ?</strong></li>
+                            <li><strong>Quel est l'impact des MCP sur le rôle du développeur ?</strong></li>
+                            <li><strong>Le Vibecoding est-il une solution viable pour réduire la complexité du développement logiciel ?</strong></li>
+                            <li><strong>Quels autres outils pourraient compléter cette approche ?</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Conclusion -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>6. Conclusion</h2>
+                    <div class="slide-illustration">
+                        <img src="images/slide6-conclusion.svg" alt="Conclusion" class="slide-svg">
+                    </div>
+                    <p>Les MCP et le Vibecoding représentent une évolution naturelle vers un développement plus fluide et automatisé. Leur adoption pourrait nous permettre de réduire le temps passé sur les configurations et d'optimiser nos processus. Il est temps d'explorer ces technologies pour améliorer notre efficacité et simplifier notre travail quotidien.</p>
+                    <p>Merci pour votre attention et place au débat !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
