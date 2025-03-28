@@ -2,6 +2,10 @@
 
 Une application web responsive pour présenter le contenu "Introduction aux Model Context Protocols (MCP) et au Vibecoding".
 
+## Lien 
+
+L'application est déployée à l'adresse suivante : https://mcpvibemustaff.netlify.app/
+
 ## Fonctionnalités
 
 - **Navigation fluide entre les diapositives** : Utilisez les boutons, les flèches du clavier ou balayez sur mobile pour naviguer
@@ -30,7 +34,7 @@ Une application web responsive pour présenter le contenu "Introduction aux Mode
 - Couleur principale : #FF9900 (Orange)
 - Couleurs secondaires :
   - #0A58A5 (Bleu)
-  - #0A58A5 (Vert)
+  - #59B224 (Vert)
   - #FC121B (Rouge)
   - #1C1C1C (Noir)
 
